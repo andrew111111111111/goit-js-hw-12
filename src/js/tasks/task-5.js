@@ -3,12 +3,6 @@
 const getAllPropValues = function (arr, prop) {
   const values = [];
 
-  for (const obj of arr) {
-    if (prop in obj) {
-      values.push(obj[prop]);
-    }
-  }
-
   return values;
 };
 const products = [
