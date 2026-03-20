@@ -1,20 +1,16 @@
 //Напиши функцію calculateTotalPrice(allProdcuts, productName), яка отримує масив об'єктів та ім'я продукту (значення властивості name). Повертає загальну вартість продукту (ціна * кількість).
 
-function calculateTotalPrice(allProducts, productName) {
-  for (const product of allProducts) {
-    if (product.name === productName) {
-      return product.price * product.quantity;
-    }
+const calculateTotalPrice = (allProdcuts, productName) => {
+  let totalPrice = 0;
+  for (const prodcut of allProdcuts) {
+    totalPrice += prodcut.price * prodcut.quantity;
   }
-}
+  return totalPrice;
+};
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
+const fruts = [
+  { name: "apple", price: 25, quantity: 2 }, //50
+  { name: "banana", price: 10, quantity: 6 }, //60
+  { name: "mango", price: 15, quantity: 5 }, //75
 ];
-
-console.log(calculateTotalPrice(products, "Radar"));
-
-console.log(calculateTotalPrice(products, "Droid"));
+console.log(calculateTotalPrice(fruts));
